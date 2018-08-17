@@ -14,3 +14,40 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+@font-face{
+    font-family: 'DoHyeon-Regular';
+    src: url(../assets/fonts/DoHyeon-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'Beyond-Wonderland';
+    src:url(../assets/fonts/Beyond-Wonderland.ttf);
+}
+
+
+ion-card-title{
+    font-family: 'DoHyeon-Regular';
+    color:#AB1A45 !important;
+    font-weight: bold;
+    text-align: center;
+    background: rgba(172,244,220,0.3);
+}
+
+h2{
+    font-family: 'Beyond-Wonderland';
+    color:blue !important;
+    font-weight: bold;
+}
+
+ion-content{
+    background: rgba(255,93,177,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,93,177,1) 0%, rgba(152,122,202,0.73) 41%, rgba(3,163,237,0.73) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,93,177,1)), color-stop(41%, rgba(152,122,202,0.73)), color-stop(100%, rgba(3,163,237,0.73)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,93,177,1) 0%, rgba(152,122,202,0.73) 41%, rgba(3,163,237,0.73) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(255,93,177,1) 0%, rgba(152,122,202,0.73) 41%, rgba(3,163,237,0.73) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(255,93,177,1) 0%, rgba(152,122,202,0.73) 41%, rgba(3,163,237,0.73) 100%);
+    background: radial-gradient(ellipse at center, rgba(255,93,177,1) 0%, rgba(152,122,202,0.73) 41%, rgba(3,163,237,0.73) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5db1', endColorstr='#03a3ed', GradientType=1 );
+}

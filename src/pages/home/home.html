@@ -1,14 +1,63 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            Mi aplicación
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+    <ion-card>
+        <img src="../assets/icon/casa.svg"/>
+        <ion-card-content>
+            <ion-card-title>
+                Hola mundo
+            </ion-card-title>
+            <ion-list>
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="../assets/icon/camper.svg">
+                    </ion-avatar>
+                    <h2 id="diferente">Hemeroteca</h2>
+                    <p>Primer Piso</p>
+                    <button ion-button item-end round color="elfeo" (click)="irHemeroteca()"   ><h2><b>VER</b></h2></button>
+                </ion-item>
+                
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="../assets/icon/gabinete.svg">
+                    </ion-avatar>
+                    <h2>Ciencias</h2>
+                    <p>Segundo Piso</p>
+                    <button ion-button item-end round color="elfeo"><h2><b>VER</b></h2></button>
+                </ion-item>
+                
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="../assets/icon/noche.svg">
+                    </ion-avatar>
+                    <h2 class="color">Humanidades</h2>
+                    <p>Tercer Piso</p>
+                    <button ion-button item-end round color="elfeo"><h2><b class="color">VER</b></h2></button>
+                </ion-item>
+                
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="../assets/icon/casa.svg">
+                    </ion-avatar>
+                    <h2>Sala de sistemas</h2>
+                    <p class="color">Cuarto Piso</p>
+                    <button ion-button item-end round color="elfeo"><h2><b>VER</b></h2></button>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
 </ion-content>
+
+<ion-footer>
+    <ion-navbar>
+        <ion-title>
+            2018
+        </ion-title>
+    </ion-navbar>
+</ion-footer>
