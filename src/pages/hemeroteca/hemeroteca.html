@@ -5,14 +5,37 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>hemeroteca</ion-title>
-  </ion-navbar>
-
+    <ion-navbar>
+        <ion-title>hemeroteca</ion-title>
+    </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label ion-text stacked>Ingrese un numero</ion-label>
+            <ion-input type="number" placeholder="Ej: 123" [(ngModel)] ="numero1" ></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label ion-text stacked>Ingrese un numero</ion-label>
+            <ion-input type="number" placeholder="Ej: 123" [(ngModel)]="numero2"></ion-input>
+        </ion-item>
+        <ion-item>
+            {{resultado}}
+        </ion-item>
+        <ion-item>
+            <button ion-button (click)="suma()">SUMA</button>
+            <button ion-button (click)="Resta()">Resta</button>
+            <button ion-button (click)="Multi()">Multi</button>
+            <button ion-button (click)="Divi()">Divi</button>
+        </ion-item>
+        <ion-item>
+            <button ion-button (click)="tabla()" full>Tabla</button>
+        </ion-item>
+        <ion-item *ngFor="let piso of edificio"> <!-- -->
+            {{piso.num}} * {{piso.ind}} = {{piso.res}}
+    </ion-item>
 
+</ion-list>
 </ion-content>

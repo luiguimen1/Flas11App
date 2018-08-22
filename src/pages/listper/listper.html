@@ -1,0 +1,30 @@
+<!--
+  Generated template for the ListperPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <ion-title>Listado de usuarios</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-header>
+            Traer los usuarios
+        </ion-card-header>
+        <ion-card-content>
+            <ion-list>
+                <ion-item>
+                    <ion-label floating># de Usuarios</ion-label>
+                    <ion-input type="number" value="" [(ngModel)]="numero"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <button ion-button (click)="consultar()">Traer</button>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
