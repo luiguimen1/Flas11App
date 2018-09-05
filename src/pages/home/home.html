@@ -8,6 +8,14 @@
 
 <ion-content>
     <ion-card>
+        <img (click)="irRegPer()" id="regper" src="../assets/regper/seo.svg"/>
+    </ion-card>
+    <ion-card>
+        <img (click)="irBusPer()" id="busPer" src="../assets/busper/search.svg"/>
+    </ion-card>
+
+
+    <ion-card>
         <img src="../assets/icon/casa.svg"/>
         <ion-card-content>
             <ion-card-title>
@@ -22,7 +30,18 @@
                     <p>Primer Piso</p>
                     <button ion-button item-end round color="elfeo" (click)="irHemeroteca()"   ><h2><b>VER</b></h2></button>
                 </ion-item>
-                
+
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="../assets/icon/gabinete.svg">
+                    </ion-avatar>
+                    <h2>Ir a si funciona</h2>
+                    <p>Trabajo con Ojectos</p>
+                    <button ion-button item-end round color="elfeo" (click)="IraSifunciona()"><h2><b>Vamos</b></h2></button>
+                </ion-item>
+
+
+
                 <ion-item>
                     <ion-avatar item-start>
                         <img src="../assets/icon/gabinete.svg">
@@ -31,7 +50,7 @@
                     <p>Segundo Piso</p>
                     <button ion-button item-end round color="elfeo"><h2><b>VER</b></h2></button>
                 </ion-item>
-                
+
                 <ion-item>
                     <ion-avatar item-start>
                         <img src="../assets/icon/noche.svg">
@@ -40,7 +59,7 @@
                     <p>Tercer Piso</p>
                     <button ion-button item-end round color="elfeo"><h2><b class="color">VER</b></h2></button>
                 </ion-item>
-                
+
                 <ion-item>
                     <ion-avatar item-start>
                         <img src="../assets/icon/casa.svg">
@@ -52,9 +71,9 @@
             </ion-list>
         </ion-card-content>
     </ion-card>
-    
+
     <button color="secondary" ion-button (click)="IrListaPer()">Ir listado</button>
-    
+
 </ion-content>
 
 <ion-footer>

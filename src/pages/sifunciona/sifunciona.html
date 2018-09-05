@@ -1,0 +1,40 @@
+<!--
+  Generated template for the SifuncionaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Si funciona</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-header>
+            Opciones de trabajo
+        </ion-card-header>
+        <ion-list>
+            <ion-item>
+                <ion-label floating>
+                    Ingrese un numero
+                </ion-label>
+                <ion-input type="number" [(ngModel)]="numero1"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>
+                    Ingrese un numero
+                </ion-label>
+                <ion-input type="number" [(ngModel)]="numero2"></ion-input>
+            </ion-item>
+            <ion-item style="text-align: center;">
+                <button ion-button color="primary" (click)="sumaSepa()">Suma separada</button>
+                <button ion-button color="secondary" (click)="sumaObjecte()">Suma Opbecto</button>
+            </ion-item>
+        </ion-list>
+    </ion-card>
+</ion-content>

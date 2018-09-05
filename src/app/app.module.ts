@@ -14,7 +14,21 @@ import {HumanidadesPage} from '../pages/humanidades/humanidades';
 import {ListperPage} from '../pages/listper/listper';
 
 import {HttpClientModule} from '@angular/common/http';
-import { ConectarProvider } from '../providers/conectar/conectar';
+import {ConectarProvider} from '../providers/conectar/conectar';
+
+import {VerperfilPage} from '../pages/verperfil/verperfil';
+
+import {SifuncionaPage} from '../pages/sifunciona/sifunciona';
+import {SumasepradaPage} from '../pages/sumaseprada/sumaseprada';
+import {SumaobjectoPage} from '../pages/sumaobjecto/sumaobjecto';
+
+
+import {RegperPage} from '../pages/regper/regper';
+import {BusperPage} from '../pages/busper/busper';
+import {PerperPage} from '../pages/perper/perper';
+import {ActperPage} from '../pages/actper/actper';
+
+import {Camera} from '@ionic-native/camera';
 
 
 @NgModule({
@@ -25,7 +39,15 @@ import { ConectarProvider } from '../providers/conectar/conectar';
         CienciasPage,
         SistemasPage,
         HumanidadesPage,
-        ListperPage
+        ListperPage,
+        VerperfilPage,
+        SifuncionaPage,
+        SumasepradaPage,
+        SumaobjectoPage,
+        RegperPage,
+        BusperPage,
+        PerperPage,
+        ActperPage
     ],
     imports: [
         BrowserModule,
@@ -40,13 +62,22 @@ import { ConectarProvider } from '../providers/conectar/conectar';
         HemerotecaPage,
         CienciasPage,
         HumanidadesPage,
-        ListperPage
+        ListperPage,
+        VerperfilPage,
+        SifuncionaPage,
+        SumasepradaPage,
+        SumaobjectoPage,
+        RegperPage,
+        BusperPage,
+        PerperPage,
+        ActperPage
     ],
     providers: [
         StatusBar,
         SplashScreen,
         {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ConectarProvider
+        ConectarProvider,
+        Camera
     ]
 })
 export class AppModule {}

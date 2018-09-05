@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {ConectarProvider} from '../../providers/conectar/conectar';
+import {VerperfilPage} from '../verperfil/verperfil';
 /**
  * Generated class for the ListperPage page.
  *
@@ -22,12 +23,21 @@ export class ListperPage {
         console.log('ionViewDidLoad ListperPage');
     }
     numero;
+    edificio;
     consultar() {
         let estado = this.acceso.traerListPer(this.numero);
-        estado.subscribe(data=>{
-            console.log(data);
-        },err=>{
+        estado.subscribe(data => {
+            this.ejecutar(data);
+        }, err => {
             console.log(err);
         });
     }
+    ejecutar(queDijoElServidor) {
+        this.edificio = queDijoElServidor.results;
+    }
+   
+    verperfil(persona){
+        this.navCtrl.push(VerperfilPage,{data:persona});
+    }
+    
 }

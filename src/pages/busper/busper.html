@@ -1,0 +1,63 @@
+<!--
+  Generated template for the BusperPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>busper</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-header>
+            Opciones de filtrado
+        </ion-card-header>
+        <ion-card-content>
+            <ion-list>
+                <ion-item>
+                    <ion-label ion-text floating>Opciones de filtro</ion-label>
+                    <ion-select [(ngModel)]="item" (ionChange)="verifique()">
+                        <ion-option value="1">Todos</ion-option>
+                        <ion-option value="cc">CC</ion-option>
+                        <ion-option value="nombre">Nombre</ion-option>
+                        <ion-option value="apellido">Apellido</ion-option>
+                        <ion-option value="email">Email</ion-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item *ngIf="item!=1?true:false">
+                    <ion-label ion-text floating>Opciones de filtro</ion-label>
+                    <ion-input ion-text [(ngModel)]="criterio"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <button ion-button style="float: right;" (click)="buscar()">Buscar</button>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-header>
+            Los resultados son:
+        </ion-card-header>
+        <ion-card-content>
+            <ion-list>
+                <ion-item *ngFor="let persona of edificio">
+                    <ion-avatar item-start>
+                        <img src="http://192.168.0.141/flas011/img/{{persona.foto}}">
+                    </ion-avatar>
+                    <h2>{{persona.nombre}} {{persona.apellido}}</h2>
+                    <p>{{persona.email}}</p>
+                    <button ion-button clear item-end (click)="verPerfil(persona)">Ver Perfil</button>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+    
+    {{error}}
+</ion-content>

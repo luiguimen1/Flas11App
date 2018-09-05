@@ -15,4 +15,10 @@ page-home {
     ion-item{
         background : none !important;
     }
+    
+    #regper, #busPer{
+        position: relative;
+        width: 30% !important;
+        margin: 0 auto !important;
+    }
 }

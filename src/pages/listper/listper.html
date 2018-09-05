@@ -27,4 +27,18 @@
             </ion-list>
         </ion-card-content>
     </ion-card>
+
+    <ion-list>
+        <div *ngFor="let persona of edificio">
+            <ion-item *ngIf="persona.gender == 'female'">
+                <ion-avatar item-start>
+                    <img src="{{persona.picture.thumbnail}}">
+                </ion-avatar>
+                <h2>{{persona.name.first}} {{persona.name.last}}</h2>
+                <p>{{persona.gender}} <b>con edad</b> {{ persona.dob.age}}</p>
+                <button ion-button item-end (click)="verperfil(persona)" >Vamosnos</button>
+            </ion-item>
+        </div>
+    </ion-list>
+
 </ion-content>
