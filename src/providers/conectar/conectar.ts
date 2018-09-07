@@ -17,22 +17,31 @@ export class ConectarProvider {
     traerListPer(numero) {
         return this.http.get("https://randomuser.me/api/?results=" + numero);
     }
-    
+
     options = {
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         }
     };
-    
+
     /**
      * Metodo que permite enviar datos de la creación de personas al servidor
      */
-    enviarAlServidor(persona:any){
+    enviarAlServidor(persona: any) {
         return this.http.post("http://192.168.0.141/flas011/controller/registro.php", JSON.stringify(persona), this.options);
     }
-    
-    
-    servidorBuscar(criterio){
+
+    servidorBuscar(criterio) {
         return this.http.post("http://192.168.0.141/flas011/controller/buscar.php", JSON.stringify(criterio), this.options);
+    }
+
+    servidorActualizar(newPersana) {
+        return this.http.post("http://192.168.0.141/flas011/controller/actualizarPersona.php", JSON.stringify(newPersana), this.options);
+    }
+
+
+    servidorDelete(Persano: any) {
+        let codigo = {id: Persano.id}
+        return this.http.post("http://192.168.0.141/flas011/controller/EliminarPersona.php", JSON.stringify(codigo), this.options);
     }
 }

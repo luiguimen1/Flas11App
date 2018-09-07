@@ -30,6 +30,9 @@ import {ActperPage} from '../pages/actper/actper';
 
 import {Camera} from '@ionic-native/camera';
 
+import {FileTransfer, FileUploadOptions, FileTransferObject} from '@ionic-native/file-transfer';
+import {File} from '@ionic-native/file';
+
 
 @NgModule({
     declarations: [
@@ -77,7 +80,11 @@ import {Camera} from '@ionic-native/camera';
         SplashScreen,
         {provide: ErrorHandler, useClass: IonicErrorHandler},
         ConectarProvider,
-        Camera
+        Camera,
+        FileTransfer,
+       // FileUploadOptions,
+        FileTransferObject,
+        File
     ]
 })
 export class AppModule {}

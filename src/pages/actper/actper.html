@@ -15,7 +15,7 @@
 
 <ion-content padding>
 <h1>Formulario de actualización</h1>
-    <form [formGroup]="RegPersona" (ngSubmit)="regper()" novalidate>
+    <form [formGroup]="RegPersona" (ngSubmit)="actualizarPer()" novalidate>
         <ion-list>
 
             <ion-item>
@@ -39,7 +39,7 @@
 
             <ion-item>
                 <ion-label ion-text floating># de Documento</ion-label>
-                <ion-input formControlName="numero" type="text"></ion-input>
+                <ion-input formControlName="numero" readonly type="text"></ion-input>
             </ion-item>
             <ion-item *ngIf="RegPersona.get('numero').errors && RegPersona.get('numero').dirty">
                 <p color="danger" ion-text *ngIf="RegPersona.get('numero').hasError('required')">El campo es Requerido</p>

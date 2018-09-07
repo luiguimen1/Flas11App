@@ -21,17 +21,22 @@
         <div class="ayuda1" (click)="SD()">Clic cambio foto SD</div>
         <ion-card-content>
             <ion-card-title>
-                {{persona.nombre}} {{persona.nombre}}
+                {{persona.nombre}} {{persona.apellido}}
             </ion-card-title>
             <p>Numero de CC: {{persona.cc}}</p>
             <p>Email: {{persona.email}}</p>
             <p>Fecha de Nacimiento: {{persona.fecnac}}</p>
             <p># Celular: {{persona.telefono}}</p>
-            <button (click)="irActuPer()">Actulizar Datos</button>
+            <button ion-button (click)="irActuPer()">Actulizar Datos</button>
+            <button style="float:right;" color="danger" ion-button (click)="showConfirm()" >Eliminar</button>
         </ion-card-content>
     </ion-card>
+    <ion-card *ngIf="imageURI">
+        <h2>Informe:{{info}}</h2>
+        <img src="{{imageURI}}"  alt="Ionic File" width="300" />
+        <button ion-button (click)="cargarFoto()">Cargar Foto</button>
+    </ion-card >
     
-    <img src="{{imageURI}}" *ngIf="imageURI" alt="Ionic File" width="300" />
     
 
 </ion-content>
